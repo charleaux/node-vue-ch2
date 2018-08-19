@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="./css/s2l26.css">
+    <link rel="stylesheet" href="./css/assignment4.css">
     <title>node-vue-ch2</title>
 </head>
 <body>
@@ -12,7 +12,7 @@
         <!-- 1) Start the Effect with the Button. The Effect should alternate the "highlight" or "shrink" class on each new setInterval tick (attach respective class to the div with id "effect" below) -->
         <div>
             <button @click="startEffect">Start Effect</button>
-            <div id="effect"></div>
+            <div id="effect" :class="effectClass"></div>
         </div>
 
         <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
