@@ -14,23 +14,23 @@
             <button @click="startEffect">Start Effect</button>
             <div id="effect" :class="effectClass"></div>
         </div>
-
+        <hr>
         <!-- 2) Create a couple of CSS classes and attach them via the array syntax -->
         <div :class="noClassArray">I got no class :(</div>
-        
+        <hr>
         <!-- 3) Let the user enter a class (create some example classes) and attach it -->
         <div>
-            <input type="text">
-            <div></div>
+            <input type="text" v-model="inputClass">
+            <div :class="inputClass"></div>
         </div>
-        
+        <hr>
         <!-- 4) Let the user enter a class and enter true/ false for another class (create some example classes) and attach the classes -->
-        <!-- <div>
-            <input type="text">
-            <input type="text">
-            <div></div>
-        </div> -->
-        
+        <div>
+            <input type="text" v-model="num4Class">
+            <input type="text" v-model="num4apply">
+            <div :class="num4Apply === true ? num4Class : ''"></div>
+        </div>
+        <hr>
         <!-- 5) Repeat 3) but now with values for styles (instead of class names). Attach the respective styles.  -->
         <!-- <div>
             <input type="text">

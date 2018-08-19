@@ -3,7 +3,11 @@ new Vue({
     data: {
         status: true,
         started: false,
-        noClassArray: ['fatBorder','vipClass']
+        noClassArray: ['fatBorder','vipClass'],
+        inputClass: 'small',
+        // inputClass: ['fatBorder', 'medium'],
+        num4Class: 'small',
+        num4Apply: true
     },
     computed: {
         effectClass: function () {
