@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <div id="exercise">
+        <p>VueJS is pretty cool - {{ name }} ({{ age }})</p>
+        <p>{{ age * 3 }} </p>
+        <p>{{ random() }}</p>
+        <div>
+                <img v-bind:src="image" alt="bound image" height="150" width="200">
+        </div>
+        <div>
+            <input type="text" v-bind:value="name">
+        </div>
+    </div>
+    <script src="./js/libs/vue.js"></script>
+    <script src="./js/assignment1.js"></script>
+</body>
+</html>
