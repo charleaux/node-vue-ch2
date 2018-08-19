@@ -1,30 +1,28 @@
 new Vue({
     el: '#exercise',
     data: {
-        highlightStatus: true
+        status: true,
+        started: false,
+        noClassArray: ['fatBorder','vipClass']
     },
     computed: {
         effectClass: function () {
-            console.log('effectClass');
-            return {
-                highlight: this.highlightStatus,
-                shrink: !this.highlightStatus
-            }
+            return {highlight: this.status, shrink: !this.status}
         }
     },
     watch: {
-        highlightStatus: function (value) {
-            console.log('highstatus');
+        started: function () {
             var vm = this;
             setTimeout(function () {
-                vm.highlightStatus = !vm.highlightStatus;
-            }, 2000);
+                vm.status = !vm.status;
+                vm.started = !vm.started;
+            }, 500);
         }
     },
     methods: {
         startEffect: function () {
-            console.log('startEffect');
-            this.highlightStatus = !this.highlightStatus;
+            // this.status = !this.status;
+            this.started = true;
         }
     }
 });
