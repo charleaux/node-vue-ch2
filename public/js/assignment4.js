@@ -8,7 +8,8 @@ new Vue({
         // inputClass: ['fatBorder', 'medium'],
         num4Class: 'small',
         num4Apply: true,
-        num5Style: 'red'
+        num5Style: 'red',
+        progressBarPct: 0
     },
     computed: {
         effectClass: function () {
@@ -16,6 +17,9 @@ new Vue({
         },
         textClass: function() {
             return JSON.parse(`{"${this.num4Class}": ${this.num4Apply}}`);
+        },
+        textStyle: function () {
+            return {backgroundColor: this.num5Style};
         }
     },
     watch: {
