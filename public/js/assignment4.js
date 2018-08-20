@@ -5,7 +5,6 @@ new Vue({
         started: false,
         noClassArray: ['small','vipClass'],
         inputClass: 'small',
-        // inputClass: ['fatBorder', 'medium'],
         num4Class: 'small',
         num4Apply: true,
         num5Style: 'red',
@@ -29,12 +28,22 @@ new Vue({
                 vm.status = !vm.status;
                 vm.started = !vm.started;
             }, 500);
+        },
+        progressBarPct: function () {
+            var vm = this;
+            setTimeout(function () {
+                if (vm.progressBarPct < 100) {
+                    vm.progressBarPct += 1;
+                }
+            }, 50);
         }
     },
     methods: {
         startEffect: function () {
-            // this.status = !this.status;
             this.started = true;
+        },
+        startProgress: function () {
+            this.progressBarPct += 1;
         }
     }
 });
