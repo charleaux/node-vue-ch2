@@ -7,7 +7,7 @@ new Vue({
         inputClass: 'small',
         num4Class: 'small',
         num4Apply: true,
-        num5Style: 'red',
+        num5Style: 'blue',
         progressBarPct: 0
     },
     computed: {
